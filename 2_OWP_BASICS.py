@@ -1,10 +1,14 @@
 """ (4) create a list whose name is data, with the elements 5, 10, 15, 20, 25.
     Show the type of data and its elements."""
 data = [5, 10, 15, 20, 25]
-print(type(data))
+print(type(data))       #<class 'list'>
 for i in data:
-    print(type(i))
-
+    print(type(i))      
+""" <class 'int'>
+    <class 'int'>
+    <class 'int'>
+    <class 'int'>
+    <class 'int'>"""
 
 
 
@@ -12,23 +16,24 @@ for i in data:
 
 """(5)_<<<<<<<<<<<<<<<<<<<<<_APPLICATION OF METHODS_>>>>>>>>>>>>>>>>>>>>>>>>"""
 days = ['Monday', 'Tuesday', 'Wednesday']
-print(days)
+print(days)                 #['Monday', 'Tuesday', 'Wednesday']
+
 days.append('Thursday')
-print(days)
+print(days)                 #['Monday', 'Tuesday', 'Wednesday', 'Thursday']
 days.extend(['Friday', 'Saturday', 'Sunday'])
-print(days)
-
-
+print(days)                 #['Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                            #'Friday', 'Saturday', 'Sunday']
+                            
 
 
 
 
 """(6)_<<<<<<<<<<<<<<<<<<<<<<_SAVING INTO A FILE_>>>>>>>>>>>>>>>>>>>>>>>>>>>"""
-fileOut = open('test.txt', 'w')        #'w' refers to writing mode,
-                                    #as opposed to'r' - reading mode"""
-#'file1 and 'test.txt' are not the same. 'file' is a file object through which
-#we can access 'test.txt'.
-#This is the first step of saving into a file - we must open a file first.
+fileOut = open('test.txt', 'w')     #'w' refers to writing mode,
+                                    #as opposed to 'r' - reading mode
+#'fileOut and 'test.txt' are not the same. 'file' is a file object in Python 
+#throug hwhich we can access 'test.txt' in Python. 'test.txt' is stored on the  
+#SSD. This is the first step of saving into a file - we must open a file first.
 #Let's use a method to write into a file.
 
                                                 #data = [5, 10, 15, 20, 25]
@@ -37,19 +42,20 @@ fileOut.write(''.join(str(i) for i in data))    #note that .write() expects
 #for i in data --> goes through every element in data
 #str(i) --> takes a given 'i', turns it into a string. 'i' is given by for loop
 #''.join() --> the join method takes its argument and writes it into the file
+#As can be seen above, 'join' is a method of the string class.
 
 
 fileOut.close()
-#Closes the test.txt file. Content of txt file: 510152025
+#Closes the file object file. Content of txt file: 510152025
 #Now I will open the file to be read.
 
 
 fileIn = open('test.txt', 'r')  #opens the test.txt file for reading. fileIn is
                                 #what refers to the file.
 forPrint = fileIn.read()        #reads the content of test.txt. If read doesn't
-#doesn't receive and argument, it reads everything, from beginning to end.
-print(forPrint)
-print(type(forPrint))
+#receive an argument, it reads everything, from beginning to end.
+print(forPrint)             #510152025
+print(type(forPrint))       #<class 'str'>
 
 
 
@@ -72,7 +78,7 @@ print(m.sqrt(4))    #we used the .sqrt function
 #Operations on ndarrays are done element by element.
 import numpy as np
 myList = [20.0, 800., 0.0, 3.0, 111.0]  #Note that all elements are floats!
-print(type(myList))
+print(type(myList))                     #<class 'list'>
 
 
 myNdarray = np.array(myList)    #Converts an object (myList) into an ndarray.
@@ -106,7 +112,7 @@ print(type(myLogSpace)) #<class 'numpy.ndarray'>
 
 #np.arange(start, stop, step, dtype=None): creates an ndarray, whose first 
 #element is 'start', and will add new elements which are bigger than the
-#previous element by the 'step' value until before an elemenet would become
+#previous element by the 'step' value until before an element would become
 #bigger than the 'stop' value.
 myArange = np.arange(100, 700, 100)
 print(myArange) #[100 200 300 400 500 600]
