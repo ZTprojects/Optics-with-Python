@@ -161,15 +161,45 @@ print('Phase (rad): \n', phi)
 #Contains multiple submodules. The submodule needed for the 2D visualization
 #is called Pyplot:
 import matplotlib.pyplot as plt
+plt.close('all')
 #This submodule requires numpy arrays, so that module must be imported, too.
-    
 
 
+#Let's have a look at some simple plots:
+plt.plot([1,2,3,3,2,5,6,5,6,7])   #The 'x' axis starts with 0 and step = 1.      
 
 
+#New datasets below. Important: len(x) = len(y)!
+x = np.linspace(-2*np.pi, 2*np.pi, 200)
+y = np.sin(x)
 
 
+plt.figure()    #without plt.figure(), the 2 plots appear on the same 
+                #figure surface. The 'figure' is what the plot will appear on.
+plt.plot(x,y)
+plt.show()
 
+
+#Let's apply "decorations"!
+x1 = np.linspace(-2*np.pi, 2*np.pi, 200)
+y1 = np.sin(x1)
+x2 = np.linspace(-2*np.pi, 2*np.pi, 20)
+y2 = np.sin(x2)
+
+
+plt.figure(3, figsize = (7,5))
+plt.plot(  x1, y1, 'g-', label='Theory'  )          #'g-': green line
+plt.plot(  x2, y2, 'ro', label='Measurement'  )     #'ro': red dots
+plt.xlabel('Phase (rad)')                           #axis title
+plt.ylabel('Voltage (V)')
+plt.legend(loc='upper right')                       #location of plot labels
+plt.show()
+
+
+#Applying a grid:
+#matplotlib.pyplot.grid(b=None, which='major', axis='both', **kwargs)
+#which: grid line type ('major, 'minor', 'both')
+#axis: grid line direction ('x', 'y', 'both')
 
 
 
