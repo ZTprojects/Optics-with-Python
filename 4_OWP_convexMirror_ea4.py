@@ -133,6 +133,9 @@ ax4.set_ylim(top=  max(  max(TSA), max(LSA))  +1)
 #because here ax plots get overwritten by the plt.subplots() command, which
 #overwrites the old axes with new empty ones.
 
+#Check out 4_OWP_convexMirror_ea4_PICTURE_2.png for the f = 500 mm case, 
+#where you can't notice the spherical aberration!
+
 
 
 
