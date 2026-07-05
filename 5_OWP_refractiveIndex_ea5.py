@@ -129,13 +129,17 @@ alpha_tr = np.arcsin(1 / n(  lamda/1000, 'n_BK7')  )*tr
 #alpha_tr = 41.30217062881335°
 beta=np.ones(len(alpha))            #The new betas need to have the same 
 beta_approx=np.ones(len(alpha))     #dimension as alpha!
+
 for i in range(len(alpha)):
+    
     if alpha[i] <= alpha_tr and alpha[i]>=0:
         beta[i] = tr * np.arcsin(  n(  lamda/1000,'n_BK7'  )  *  np.sin(alpha[i]/tr)  )
         beta_approx[i] = n(  lamda/1000, 'n_BK7'  ) * alpha[i]
+        
     elif alpha[i]>alpha_tr and alpha[i]<=90: 
         beta[i] = 90
         beta_approx[i] = 90
+        
     else:
         beta[i] = 'Invalid input'
         beta_approx[i] = 'Invalid input'
@@ -152,10 +156,11 @@ ax_n.set_xlabel('Angle of incidence [°]')
 ax_n.set_ylabel('Angle of refraction [°]')
 ax_n.set_xlim(0,alpha_tr*1.1)
 ax_n.set_ylim(0,90)
-
-
-
 #Fun fact: even in the case of total reflection, some light does get into the
 #medium with a lower refractive index. See: evanescent waves.
+
+
+
+
 
 
