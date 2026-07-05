@@ -3,7 +3,7 @@ import numpy as np
 
 #np.zeros(shape, dtype=float, order='C'): creates an ndarray with zeroes.
 #shape: int or tuple made out of ints. Size of the new object.
-#dtype: data type of the zeroes, flaots and integers, for example.
+#dtype: data type of the zeroes, floats and integers, for example.
 print(np.zeros(5))              #[0. 0. 0. 0. 0.]
 print(np.zeros(5, dtype=int))   #[0 0 0 0 0]
 print(np.zeros((3,5)))          #this will be a 3x5 type matrix:
