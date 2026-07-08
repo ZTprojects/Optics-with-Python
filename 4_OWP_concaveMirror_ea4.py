@@ -13,7 +13,7 @@ plt.close('all')
 #focus point and the vertex of the mirror. 
 
 #Below there will be a calculation of the light ray's path. For the explanation
-#of the used notations, take a look at '4_OWP_convexLens_ea4_PICTURE_1.png'. 
+#of the used notations, take a look at '4_OWP_concaveLens_ea4_PICTURE_1.png'. 
 #Note to self: find a better alternative to MS Paint...
 
 
