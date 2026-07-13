@@ -7,7 +7,7 @@ plt.close('all')
 
 
 
-"""(10)_<<<<<<<<<<<<<<<<<<<<<<<<<_CONVEX MIRROR_>>>>>>>>>>>>>>>>>>>>>>>_(10)"""
+"""(10)_<<<<<<<<<<<<<<<<<<<<<<<<<_CONCAVE MIRROR_>>>>>>>>>>>>>>>>>>>>>>_(10)"""
 #We will be using geometric optics here. The light rays coming parallel to the
 #optical axis and are far away from it will be focused to between the paraxial
 #focus point and the vertex of the mirror. 
@@ -135,69 +135,6 @@ ax4.set_ylim(top=  max(  max(TSA), max(LSA))  +1)
 
 #Check out 4_OWP_convexMirror_ea4_PICTURE_2.png for the f = 500 mm case, 
 #where you can't notice the spherical aberration!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
